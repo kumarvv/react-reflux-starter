@@ -5,9 +5,9 @@ Starter template with:
 - Reflux 
 - jQuery 
 - Lodash
-- Babelify (ES2015)
+- Babelify (react, es2015, stage-1)
 - Browserify 
-- Gulp 
+- Gulp (dev+production build options)
 
 
 Installation 
@@ -15,3 +15,10 @@ Installation
 - checkout from repo 
 - <code>npm install</code>
 
+Build
+---
+- Development: <code>gulp all</code> 
+- Production: <code>gulp all --production</code>
+- generates two js files: 
+-- *common.js* - all dependecies (minified when run for production) 
+-- *app.js* - application code from app/**/*.jsx files 
