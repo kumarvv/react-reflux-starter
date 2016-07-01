@@ -36,15 +36,17 @@ class App extends React.Component {
 		let {welcome, features} = this.state; 
 
 		let featuresDOM = features !== undefined ? features.map(f => {
-			return <li key={f.key}>{f.label}</li>  
+			return <li key={f.key}><a href={f.url} target='_blank'>{f.label}</a></li>  
 		}) : <li></li>;
 
-		return <div>
+		return <div className='ui center aligned segment'>
 			<h1>{welcome}</h1>
-			<p>Features:</p>
-			<ul>
-				{featuresDOM}
-			</ul>
+			<h3>Features</h3>
+			<div className='ui left aligned segment'>
+				<ul>
+					{featuresDOM}
+				</ul>
+			</div>
 		</div>; 
 	}
 
